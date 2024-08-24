@@ -1,4 +1,5 @@
 import * as Tabs from '@radix-ui/react-tabs'
+import { motion } from 'framer-motion'
 export interface TabItemsProps {
   value: string
   title: string
@@ -12,7 +13,10 @@ export function TabItems({ value, title, isSelected = false }: TabItemsProps) {
     >
       <span>{title}</span>
       {isSelected && (
-        <div className="absolute -bottom-px left-0 right-0 h-0.5 bg-violet-700" />
+        <motion.div
+          layoutId="11"
+          className="absolute -bottom-px left-0 right-0 h-0.5 bg-violet-700"
+        />
       )}
     </Tabs.Trigger>
   )
